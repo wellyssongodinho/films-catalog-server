@@ -20,7 +20,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "db:up": "docker-compose up -d",
-    "db:generate": "prisma generate",
+    "db:generate": "npx prisma generate",
     "db:down": "docker-compose down"
   },
   "dependencies": {
