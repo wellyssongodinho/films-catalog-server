@@ -1,7 +1,11 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
+
+**<p align="center">NestJS</p>**
+
 <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+
 <div id="top"></div>
 
 # Challenge
@@ -143,10 +147,12 @@ $ npm run test:cov
 2. frontend:
 
 - [ ] Create Layout (with React/Figma)
+- [ ] Add Hooks (with React)
 
 ### Preview Project
 
-- [![CodeSandbox][CodeSandbox]][CodeSandbox-url]: 
+- [![CodeSandbox][CodeSandbox]][CodeSandbox-url]:
+
 >Note: This feature is being developed.
 
 ## Contributing
