@@ -65,7 +65,6 @@ export class FilmsService {
     if (!film || film === undefined) {
       return new NotFoundException(`Film ${title} does not exists`);
     }
-    console.log('passou 2');
     return film;
   }
 
@@ -76,7 +75,7 @@ export class FilmsService {
 
   async findExternalApi() {
     //`This action returns all films external API`;
-    console.log('findExternalApi Service');
+    // console.log('findExternalApi Service');
     // Axios GET Query Parameters
     const queryParams = {
       limit: 50,
