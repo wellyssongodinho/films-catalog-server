@@ -1065,6 +1065,104 @@ Smoothly integrated Prisma in a NestJS project
 Documented your REST API using Swagger and OpenAPI
 One of the main takeaways from this tutorial is how easy it is to build a REST API with NestJS and Prisma. This is an incredibly productive stack for rapidly building well structured, type-safe and maintainable backend applications.
 
+## Adds
+
+After uploading your code to github
+
+### CI/CD with GitHub Actions: Automatic Deploy
+
+#### Set up GitHub Actions
+
+1- Acess your repository in the github
+2- Click on Tab Actions
+3- Select the Nodejs Workflow Model
+4- This will create a file node.js.yml that will be responsible for automatic deployed.
+5- At the end it will automatically run the workflow as defined.
+
+For more information access, [read more here](https://docs.github.com/en/actions/learn-github-actions).
+
+![git-hub-actions](./git/git-hub-actions.png)
+![github-workflows](./git/github-workflows.png)
+
+### Install Local Heroku
+
+```bash
+sudo npm install -g heroku
+````
+
+#### Verify Your Installation
+
+To verify your CLI installation, use the heroku --version command:
+
+```bash
+heroku --version
+  heroku/7.66.4 linux-x64 node-v16.18.1
+```
+
+#### Register or access your account in Heroku
+
+1- Create a new app;
+2- Choose your name <films-catalog-server>
+3- Choose a region <> 'us-east-1'
+
+#### Get Started with the Heroku CLI
+
+After you install the CLI, run the heroku login command. Enter any key to go to your web browser to complete login. The CLI then logs you in automatically:
+
+```bash
+$ heroku login
+heroku: Press any key to open up the browser to login or q to exit
+ ›   Warning: If browser does not open, visit
+ ›   https://cli-auth.heroku.com/auth/browser/***
+heroku: Waiting for login...
+Logging in... done
+Logged in as me@example.com
+```
+
+If you’d prefer to stay in the CLI to enter your credentials, run heroku login -i.
+
+```bash
+heroku login -i
+heroku: Enter your login credentials
+Email: me@example.com
+Password: ***************
+Two-factor code: ********
+Logged in as me@heroku.com
+```
+
+#### Join your Git repository
+
+Access your repository directory <films-catalog-server>
+
+```bash
+heroku git:remote -a films-catalog-server
+
+/media/wellysson/SW/JavaScript Projects/films-catalog-server main
+❯ heroku git:remote -a films-catalog-server
+set git remote heroku to https://git.heroku.com/films-catalog-server.git
+```
+
+#### Deployment method GitHub
+
+1- Access your application in Heroku and select the Deploy Sheet
+2- Connect to GitHub
+3- Search for a repository to connect
+![heroku-connect-github](./git/heroku-connect-github.png)
+4- Click in Connect
+5- Select Automatic Deploy
+![heroku-connected-github](./git/heroku-connected-github.png)
+#### Deploy your application
+
+Commit your code to the repository and deploy it to Heroku using Git.
+
+```bash
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku main
+```
+
+
+
 [NestJS]: https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=NestJS&logoColor=#E0234E
 [Nest-url]: https://nextjs.org
 
