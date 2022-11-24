@@ -53,6 +53,7 @@ Not specified. Free creativity.
   <a href="#rocket-tecnologies">Tecnologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#construction-roadmap">Roadmap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#how-to-contribure">How to contribure</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
@@ -74,6 +75,28 @@ The films-catolog aims to be a film catalog with basic information on title, des
 ## 🔖 Layout
 
 Not defined yet.
+
+## :construction: Roadmap
+
+1. backend:
+
+- [x] Create API's (with NestJS)
+- [x] Create API's documentation (with Swagger)
+- [x] Add Test E2E (with Jest)
+- [ ] Add Deploy Heroku
+- [ ] Add Test Unit (with Jest)
+- [ ] Add Pagination
+
+2. frontend:
+
+- [ ] Create Layout (with React/Figma)
+- [ ] Add Hooks (with React)
+
+### :checkered_flag: Preview Project
+
+- [![CodeSandbox][CodeSandbox]][CodeSandbox-url]:
+
+>Note: This feature is being developed.
 
 ## 🤔 How to contribure
 
@@ -202,28 +225,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Roadmap
-
-1. backend:
-
-- [x] Create API's (with NestJS)
-- [x] Create API's documentation (with Swagger)
-- [x] Add Test E2E (with Jest)
-- [ ] Add Deploy Heroku
-- [ ] Add Test Unit (with Jest)
-- [ ] Add Pagination
-
-2. frontend:
-
-- [ ] Create Layout (with React/Figma)
-- [ ] Add Hooks (with React)
-
-### Preview Project
-
-- [![CodeSandbox][CodeSandbox]][CodeSandbox-url]:
-
->Note: This feature is being developed.
 
 ## Contributing
 
