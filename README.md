@@ -83,17 +83,19 @@ Not defined yet.
 - [x] Create API's (with NestJS)
 - [x] Create API's documentation (with Swagger)
 - [x] Add Test E2E (with Jest)
-- [ ] Add Deploy Heroku
+- [x] Add Deploy Heroku (deploy with github actions [build and test])
 - [ ] Add Test Unit (with Jest)
 - [ ] Add Pagination
 
 2. frontend:
 
 - [ ] Create Layout (with React/Figma)
+- [ ] Add Styleds Components
 - [ ] Add Hooks (with React)
 
 ### :checkered_flag: Preview Project
 
+- [![Heroku-server][Heroku-server]][Heroku-server-url]
 - [![CodeSandbox][CodeSandbox]][CodeSandbox-url]:
 
 >Note: This feature is being developed.
@@ -255,6 +257,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 [Gmail]: https://img.shields.io/badge/-wellysson.gomes@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:wellysson.gomes@gmail.com
 [Gmail-url]: mailto:wellysson.gomes@gmail.com
+
+[Heroku-server]: https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white
+[Heroku-server-url]: https://films-catalog-server.herokuapp.com/api
 
 [Linkedin]: https://img.shields.io/badge/-Wellysson_Godinho-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wellyssongodinho-236170234/
 [Linkedin-url]: https://linkedin.com/in/wellyssongodinho/

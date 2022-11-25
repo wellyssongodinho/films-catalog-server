@@ -1130,6 +1130,20 @@ Two-factor code: ********
 Logged in as me@heroku.com
 ```
 
+### Create a Procfile
+
+Heroku needs to create a Procfile for identify the command to start the server. Type the following:
+
+```bash
+web: npm run start:prod
+```
+
+Include or update the following script in your package.json:
+
+```bash
+"start:prod": "node dist/src/main.js",
+```
+
 #### Join your Git repository
 
 Access your repository directory <films-catalog-server>
@@ -1151,6 +1165,7 @@ set git remote heroku to https://git.heroku.com/films-catalog-server.git
 4- Click in Connect
 5- Select Automatic Deploy
 ![heroku-connected-github](./git/heroku-connected-github.png)
+
 #### Deploy your application
 
 Commit your code to the repository and deploy it to Heroku using Git.
@@ -1160,8 +1175,6 @@ $ git add .
 $ git commit -am "make it better"
 $ git push heroku main
 ```
-
-
 
 [NestJS]: https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=NestJS&logoColor=#E0234E
 [Nest-url]: https://nextjs.org
