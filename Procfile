@@ -1,3 +1,3 @@
 server: npm run start:prod
 
-release: npm run db:generate
+release: npx prisma migrate deploy
