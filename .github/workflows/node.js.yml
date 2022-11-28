@@ -31,4 +31,4 @@ jobs:
     - run: npm run build --if-present
     - run: npm run db:generate
     - run: npm run test:e2e
-#    - run: npm run db:down
+    - run: npm run db:down

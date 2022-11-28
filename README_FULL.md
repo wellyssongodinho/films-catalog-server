@@ -1156,6 +1156,13 @@ heroku git:remote -a films-catalog-server
 set git remote heroku to https://git.heroku.com/films-catalog-server.git
 ```
 
+Checkpoint: git remote -v should show the Heroku git remote for your application:
+
+```bash
+heroku https://git.heroku.com/your-app-name.git (fetch)
+heroku https://git.heroku.com/your-app-name.git (push)
+```
+
 #### Deployment method GitHub
 
 1- Access your application in Heroku and select the Deploy Sheet
