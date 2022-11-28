@@ -1156,11 +1156,37 @@ heroku git:remote -a films-catalog-server
 set git remote heroku to https://git.heroku.com/films-catalog-server.git
 ```
 
-Checkpoint: git remote -v should show the Heroku git remote for your application:
+**Checkpoint**: git remote -v should show the Heroku git remote for your application:
 
 ```bash
 heroku https://git.heroku.com/your-app-name.git (fetch)
 heroku https://git.heroku.com/your-app-name.git (push)
+```
+
+#### Add a PostgreSQL database to your application
+
+Heroku allows your to provision a PostgreSQL database as part of an application.
+
+Create the database with the following command:
+
+```bash
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
+**Checkpoint**: To verify the database was created you should see the following:
+
+```bash
+
+❯ heroku addons:create heroku-postgresql:hobby-dev
+Creating heroku-postgresql:hobby-dev on ⬢ films-catalog-server... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+DEPRECATION NOTICE:
+ Starting November 28th, 2022, ‘hobby-dev’ databases will no longer be available. To retain your data after this date, upgrade to ‘mini’ or another paid plan. 
+ Learn more in our blog (https://blog.heroku.com/new-low-cost-plans)
+Created postgresql-octagonal-47050 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
 ```
 
 #### Deployment method GitHub
