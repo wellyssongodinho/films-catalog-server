@@ -1130,12 +1130,21 @@ Two-factor code: ********
 Logged in as me@heroku.com
 ```
 
+**Checkpoint**: heroku `auth:whoami` should show your username:
+
+```bash
+heroku auth:whoami
+> your-email
+```
+
 ### Create a Procfile
 
 Heroku needs to create a Procfile for identify the command to start the server. Type the following:
 
 ```bash
-web: npm run start:prod
+server: npm run start:prod
+
+release: npx prisma migrate deploy
 ```
 
 Include or update the following script in your package.json:
