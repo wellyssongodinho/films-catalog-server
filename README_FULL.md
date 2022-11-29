@@ -1142,7 +1142,7 @@ heroku auth:whoami
 Heroku needs to create a Procfile for identify the command to start the server. Type the following:
 
 ```bash
-server: npm run start:prod
+web: npm run start:prod
 
 release: npx prisma migrate deploy
 ```
