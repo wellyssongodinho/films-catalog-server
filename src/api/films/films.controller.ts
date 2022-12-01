@@ -37,11 +37,22 @@ export class FilmsController {
     return await this.filmsService.import();
   }
 
+
   @Get()
   @ApiOkResponse({ type: FilmEntity, isArray: true })
-  @ApiQuery({ name: 'title', required: false })
-  async findAll(@Query('title') title?: string) {
-    if (!title) return await this.filmsService.findAll();
+  @ApiQuery({ name: 'title', required: false, })
+  @ApiQuery({ name: 'limit', required: false, type: Number })
+  @ApiQuery({ name: 'id', description: 'Last unique ID shown on page. Required param limit', required: false, type: Number })
+  async findAll(@Query('title') title?: string, @Query('limit') limit?: number, @Query('id') id?: number) {
+
+    if (!title) {
+      if (isNaN(id))
+        return await this.filmsService.findAll(+limit, null);
+      else{
+        const cursor = JSON.parse(`{"id":${+id}}`);
+        return await this.filmsService.findAll(+limit, cursor);
+      }
+    }  
     else return await this.filmsService.findOneTitle(title);
   }
 

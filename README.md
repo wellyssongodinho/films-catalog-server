@@ -85,13 +85,13 @@ Not defined yet.
 - [x] Add Test E2E (with Jest)
 - [x] Add Deploy Heroku (deploy with github actions [build and test])
 - [ ] Add Test Unit (with Jest)
-- [ ] Add Pagination
+- [x] Add Pagination
 
 2. frontend:
 
-- [ ] Create Layout (with React/Figma)
-- [ ] Add Styleds Components
-- [ ] Add Hooks (with React)
+- [x] Create Layout (with Next)
+- [x] Add Styleds Components
+- [x] Add Hooks (with React)
 
 ### :checkered_flag: Preview Project
 

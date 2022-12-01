@@ -4,8 +4,9 @@ import {
   Injectable,
   NotFoundException
 } from '@nestjs/common';
-import { PrismaService } from './../../../src/config/prisma';
-import { api } from './../../../src/service/api';
+import { AxiosRequestConfig } from 'axios';
+import { Film, Prisma, PrismaService } from './../../../src/config/prisma';
+import api from './../../../src/service/api';
 import { CreateFilmDto } from './dto/create-film.dto';
 import { UpdateFilmDto } from './dto/update-film.dto';
 import { FilmEntity } from './entities/film.entity';
@@ -33,7 +34,6 @@ export class FilmsService {
     );
     // console.log(JSON.stringify(films));
     const films: FilmEntity[] = [];
-    // const errors: Error[] = [];
     for (const {
       title,
       description,
@@ -54,9 +54,22 @@ export class FilmsService {
     return films;
   }
 
-  async findAll() {
+  async findAll(limit?: number, cursor?: Prisma.FilmWhereUniqueInput): Promise<Film[]> {
     //`This action returns all films`;
-    return await this.prisma.film.findMany();
+    if (isNaN(limit) )
+      return await this.prisma.film.findMany();
+    else{
+      if (!cursor)
+        return await this.prisma.film.findMany({
+          take: limit
+        });  
+      else
+        return await this.prisma.film.findMany({
+        take: limit,
+        skip: 1,
+        cursor
+      });
+    }  
   }
 
   async findOneTitle(title: string) {
@@ -75,10 +88,9 @@ export class FilmsService {
 
   async findExternalApi() {
     //`This action returns all films external API`;
-    // console.log('findExternalApi Service');
     // Axios GET Query Parameters
-    const queryParams = {
-      limit: 50,
+    const queryParams: AxiosRequestConfig = {
+      params: {limit: 50},
     };
     const response = await api.get('/films', queryParams);
     return JSON.stringify(response.data);

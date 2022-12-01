@@ -1,7 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
+// import axios from 'axios';
 const axios = require('axios');
 
-export const api = axios.create({
+const api = axios.create({
   baseURL: 'https://ghibliapi.herokuapp.com',
   headers: {
     'Content-Type': 'application/json; charset=UTF-8',
@@ -9,4 +10,5 @@ export const api = axios.create({
   },
 });
 
+export default api;
 // module.exports = { api };
